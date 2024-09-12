@@ -248,10 +248,12 @@ keyboard_selector () {
 
 efi_selector () {
 # YYY
+ESP="/dev/disk/by-partlabel/"EFI system partition""
+            ROOT="/dev/disk/by-partlabel/"root partition""
     input_print "Eigene EFI Partition erstellen (0) oder vorhandene verwenden (1) ?"
     read -r efi_choice
     case $efi_choice in
-        0 ) kernel="linux"
+        0 ) mkfs.fat -F 32 /dev/efi_system_partition
             return 0;;
         1 ) kernel="linux-zen"
             return 0;;
@@ -317,6 +319,11 @@ until hostname_selector; do : ; done
 # User sets up the user/root passwords.
 until userpass_selector; do : ; done
 until rootpass_selector; do : ; done
+
+mkfs.ext4 /dev/root_partition
+#YYY
+mount $ROOT /mnt
+mount $EFI /mnt/boot
 
 
 
