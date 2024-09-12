@@ -247,31 +247,50 @@ keyboard_selector () {
 }
 
 efi_selector () {
-    input_print "Eigene EFI Partition erstellen oder vorhandene verwenden?" locale
-    read -r locale
-    if [[ "$CPU" == *"AuthenticAMD"* ]]; then
-        info_print "An AMD CPU has been detected, the AMD microcode will be installed."
-        microcode="amd-ucode"
-    else
-        info_print "An Intel CPU has been detected, the Intel microcode will be installed."
-        microcode="intel-ucode"
-    fi
-}
-disk_mode_selector () {
-    input_print "Festplatte Ueberschreiben oder neue partition erstellen?" locale
-    read -r locale
-    case "$locale" in
-        '') locale="en_US.UTF-8"
-            info_print "$locale will be the default locale."
+# YYY
+    input_print "Eigene EFI Partition erstellen (0) oder vorhandene verwenden (1) ?"
+    read -r efi_choice
+    case $efi_choice in
+        0 ) kernel="linux"
             return 0;;
-        '/') sed -E '/^# +|^#$/d;s/^#| *$//g;s/ .*/ (Charset:&)/' /etc/locale.gen | less -M
-                clear
+        1 ) kernel="linux-zen"
+            return 0;;
+        * ) error_print "You did not enter a valid selection, please try again."
+            return 1
+    esac
+}
+
+disk_mode_selector () {
+# fdisk /dev/the_disk_to_be_partitioned
+    input_print "Festplatte Ueberschreiben (0) oder neue partition(en) erstellen (1) ?"
+    read -r disk_choice
+    case $disk_choice in
+        0 ) # Warn user about deletion of old partition scheme.
+            input_print "This will delete the current partition table on $DISK once installation starts. Do you agree [y/N]?: "
+            read -r disk_response
+            if ! [[ "${disk_response,,}" =~ ^(yes|y)$ ]]; then
+                error_print "Quitting."
                 return 1;;
-        *)  if ! grep -q "^#\?$(sed 's/[].*[]/\\&/g' <<< "$locale") " /etc/locale.gen; then
-                error_print "The specified locale doesn't exist or isn't supported."
-                return 1
             fi
-            return 0
+            info_print "Wiping $DISK."
+            wipefs -af "$DISK" &>/dev/null
+            sgdisk -Zo "$DISK" &>/dev/null
+
+            # Creating a new partition scheme.
+            info_print "Creating the partitions on $DISK."
+            parted -s "$DISK" \
+                mklabel gpt \
+                mkpart "EFI system partition" fat32 1MiB 1025MiB \
+                set 1 esp on \
+                mkpart "root partition" ext4 1025MiB 100%
+            
+            ESP="/dev/disk/by-partlabel/"EFI system partition""
+            ROOT="/dev/disk/by-partlabel/"root partition""
+            return 0;;
+        1 ) #YYY
+            return 0;;
+        * ) error_print "You did not enter a valid selection, please try again."
+            return 1
     esac
 }
 
