@@ -3,11 +3,9 @@ Installing Arch: [Installing Arch](https://wiki.archlinux.org/title/Installation
 Vorbereiten:
 ===========
 
-Arch download: [Download Page](https://archlinux.org/download/)
-
-Arch direct download Link: [Download](https://mirror.informatik.tu-freiberg.de/arch/iso/2024.09.01/)
-
-Bootstick erstellen
+- GGF in Linux die Partition verkleinern (Datentraegerverwaltung)
+- Herunterladen: [Download Seite](https://archlinux.org/download/) | [Direkter Download](https://geo.mirror.pkgbuild.com/iso/2024.09.01/)
+- Bootstick erstellen
 
 Mit Wlan verbinden:
 ==========
