@@ -1,11 +1,13 @@
-# archinstall
-Script(s) that provide arch installation/configuration helpers
-
 Installing Arch: [Installing Arch](https://wiki.archlinux.org/title/Installation_guide)
+
+Vorbereiten:
+===========
 
 Arch download: [Download Page](https://archlinux.org/download/)
 
 Arch direct download Link: [Download](https://mirror.informatik.tu-freiberg.de/arch/iso/2024.09.01/)
+
+Bootstick erstellen
 
 Mit Wlan verbinden:
 ==========
@@ -20,3 +22,7 @@ Verbinden: `station wlan0 connect` *netzwerkname*
 Wenn verbunden, *Strg+C*
 
 Verbindung testen: `ping 3 google.com`
+
+Arch Installieren:
+===========
+
