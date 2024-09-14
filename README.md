@@ -15,6 +15,9 @@ EFI partition größer machen:
 
 - Whatsapp installieren
 - Chrome installieren: `$Path = $env:TEMP; $Installer = "chrome_installer.exe"; Invoke-WebRequest "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -OutFile $Path$Installer; Start-Process -FilePath $Path$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path$Installer`
+- Fast Startup & Hibernation ausmachen: `> powercfg /H off`
+
+[Bluetooth Devices, Mac adress](https://wiki.archlinux.org/title/Bluetooth#Dual_boot_pairing)
 
 Vorbereiten:
 ===========
