@@ -1,9 +1,25 @@
 Installing Arch: [Installing Arch](https://wiki.archlinux.org/title/Installation_guide)
 
+Tiny11 setup:
+===========
+EFI partition größer machen:
+> Shift+F10
+>
+> `Diskpart.exe`
+> 
+> `list disk` -> 0
+> 
+> `select disk 0` (oder andere Zahl)
+> 
+> `create partition efi size=1000`
+
+- Whatsapp installieren
+- Chrome installieren: `$Path = $env:TEMP; $Installer = "chrome_installer.exe"; Invoke-WebRequest "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -OutFile $Path$Installer; Start-Process -FilePath $Path$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path$Installer`
+
 Vorbereiten:
 ===========
 
-- GGF in Linux die Partition verkleinern (Datentraegerverwaltung)
+- GGF in Windows die Partition verkleinern (Datentraegerverwaltung)
 - Herunterladen: [Download Seite](https://archlinux.org/download/) | [Direkter Download](https://geo.mirror.pkgbuild.com/iso/2024.09.01/)
 - Bootstick erstellen (Rufus,...)
 - Neu Starten
@@ -27,6 +43,16 @@ Verbindung testen: `ping 3 google.com`
 
 Arch Installieren:
 ===========
+
+Archinstall:
+> pimmel
+
+
+
+
+
+
+
 
 fdisk /dev/sda
     (m)
