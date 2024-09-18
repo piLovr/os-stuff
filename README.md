@@ -49,8 +49,8 @@ Wenn verbunden, *Strg+C*
 Verbindung testen: `ping 3 google.com`
 
  ### Archinstall:
-> pimmel
-
+> Archinstall language -> German
+> Spiegelserver -> Spiegelserver-Region (warten, sucht besten Server für downloads)
 
 Linux Scheiß von Jan
 ===========
