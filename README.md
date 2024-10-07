@@ -76,18 +76,12 @@ Nun: `archinstall`
 - Abfahrt Installieren
 
 ### Arch einrichten
-- Browser aufmachen, nach "yay github" suchen (`https://github.com/Jguer/yay`)
-- 
-
-
-
-
-
-
-
-
-
-
+- Console auf machen
+- `sudo su` -> USER passwort eingeben
+- `pacman -S tailscale`
+- `sudo systemctl enable --now tailscaled`
+- `sudo tailscale up` -> bekommst link für dein Handy browser, da auf knopf und fertig
+- rest mach ich xD
 
 Linux Scheiß von Jan
 ===========
