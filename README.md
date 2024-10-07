@@ -44,15 +44,40 @@ Netzwerke anzeigen (wlan0 ggf. durch device ersetzen) : `station wlan0 get-netwo
 
 Verbinden: `station wlan0 connect` *netzwerkname*
 
+*passwort eingeben*
+
 Wenn verbunden, *Strg+C*
 
-Verbindung testen: `ping 3 google.com`
+Verbindung testen: `ping -c 3 google.com` -> Sollte Ping ausspucken und ein paar Zeilen mit "64 bytes from..."
+
+Nun: `archinstall`
 
  ### Archinstall:
-> Archinstall language -> German
-> Spiegelserver -> Spiegelserver-Region (warten, sucht besten Server für downloads)
+-  Archinstall language -> German (92% oder so steht da)
+- Spiegelserver -> Spiegelserver-Region -> Germany (warten, sucht besten Server für downloads) -> Zurück
+- Lokalisierung -> Tastaturlayout einstellen, Lokale sprache = `de_DE.UTF-8` ("/" zum suchen), Lokale Kodierung auf UTF-8 lassen -> zurück (schreib ich jetzt das letzte mal dazu xD
+- Laufwekskonfig. -> Partionierung -> Empfohlenes verwenden -> Festplatte auswählen (tendenziell das größte, das wo "size" passt) -> btrfs -> Ja -> Ja (Komprimierung verwenden) -> Zurück
+- Festplattenverschlüsselung kannste skippen
+- Bootloader: Systemd-boot (Standard)
+- Vereinigte Kernel-Images kannste skippen (auf Nein/False lassen)
+- Swap auf True lassen
+- Gerätename/Hostname kannste anpassen wie du magst für tailscale
+- Root-Passwort ist admin passwort, setz es und lass es mich wissen (groß-kleinschreibung bitte beachten lel)
+- Benutzerkonto -> hinzufügen (name in kleinbuchstaben), passwort setzen und mich wissen lassen danke, ja, soll superuser (admin) sein -> bestätigen und schließen (Bitte dann in standard übersicht prüfen ob da auch steht "1 User(s)", wenn nicht dann bitte nochmal, account ist wichtig xD
+- Profil -> Typ -> Desktop -> Gnome (oder Deepin wenns sein muss xD) -> Greeter -> sddm -> zurück (solltest jetzt in der übersicht sein, beim punkt profil. geh bitte nochmal eins hoch und schau ob da gnome, sddm unso steht, ohne grafische Oberfläche hast dus glaube schwerer (kann ich ja nachher wieder deinstallieren lel)
+- Audio -> Pipewire
+- Kernel kannste so lassen (linux)
+- keine zusätzlichen pakete (machen wir naccher)
+- Netzwerkkonfiguration -> NetworkManager
+- Zeitzone -> Europe/Berlin (gerne suchen mit "/")
+- NTP an lassen
+- Keine zusätzlichen repos
 
+- Abfahrt Installieren
 
+### Arch einrichten
+- Browser aufmachen, nach "yay github" suchen (`https://github.com/Jguer/yay`)
+- 
 
 
 
