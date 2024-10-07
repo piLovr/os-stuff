@@ -38,7 +38,7 @@ Von Stick booten (Secure boot off!)
 ### Mit Netzwerk verbinden (wenn kein Lan)
 `iwctl`
 
-Netzwerk module anzeigen (Wlan, lan) : `device List`
+Netzwerk module anzeigen (Wlan, lan) : `device list`
 
 Netzwerke anzeigen (wlan0 ggf. durch device ersetzen) : `station wlan0 get-networks`
 
@@ -77,16 +77,16 @@ Nun: `archinstall`
 
 ### Arch einrichten
 - Console auf machen
-- `sudo su` -> USER passwort eingeben
 
 ##### Tailscale
+- `sudo su` -> USER passwort eingeben
 - `pacman -S tailscale`
-- `sudo systemctl enable --now tailscaled`
-- `sudo tailscale up` -> bekommst link für dein Handy browser, da auf knopf und fertig
+- `systemctl enable --now tailscaled`
+- `tailscale up` -> bekommst link für dein Handy browser, da auf knopf und fertig
 
 ##### Anydesk
 
-- `sudo pacman -Sy`
+- `sudo pacman -Sy` -> USER passwort eingaben (wenn nix gehen probier halt admin lol)
 - `sudo pacman -S glibc lib32-glibc`
 - `sudo pacman -S yay`
 - `yay -S anydesk-bin`
