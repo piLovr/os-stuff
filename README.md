@@ -52,6 +52,18 @@ Verbindung testen: `ping 3 google.com`
 > Archinstall language -> German
 > Spiegelserver -> Spiegelserver-Region (warten, sucht besten Server für downloads)
 
+
+
+
+
+
+
+
+
+
+
+
+
 Linux Scheiß von Jan
 ===========
 ### Bluetooth
