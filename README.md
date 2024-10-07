@@ -78,9 +78,19 @@ Nun: `archinstall`
 ### Arch einrichten
 - Console auf machen
 - `sudo su` -> USER passwort eingeben
+
+###### Tailscale
 - `pacman -S tailscale`
 - `sudo systemctl enable --now tailscaled`
 - `sudo tailscale up` -> bekommst link für dein Handy browser, da auf knopf und fertig
+
+##### Anydesk
+
+- `sudo pacman -Sy`
+- `sudo pacman -S glibc lib32-glibc`
+- `sudo pacman -S yay`
+- `yay -S anydesk-bin`
+
 - rest mach ich xD
 
 Linux Scheiß von Jan
