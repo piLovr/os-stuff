@@ -79,7 +79,7 @@ Nun: `archinstall`
 - Console auf machen
 - `sudo su` -> USER passwort eingeben
 
-###### Tailscale
+##### Tailscale
 - `pacman -S tailscale`
 - `sudo systemctl enable --now tailscaled`
 - `sudo tailscale up` -> bekommst link für dein Handy browser, da auf knopf und fertig
