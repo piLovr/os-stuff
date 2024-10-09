@@ -96,7 +96,7 @@ Nun: `archinstall`
 
 Copilot chat bez. arch server
 ===========
-
+[Lamp Gist](https://gist.github.com/superjojo140/18e250786d977b27571124f81bba5018)
 [Link](https://github.com/copilot/c/4ea1e118-10c5-4fa7-a2a2-631ebce95368)
 
 ## I want to setup a "server" on arch linux. I need a database, which is accessible inside the local network (I use tailscale to access it from elsewhere) and has a phpmyadmin console (which should also be accessible elsewhere). What do I need to install and how to configure it, give me a tutorial
