@@ -83,6 +83,7 @@ Nun: `archinstall`
 - `pacman -S tailscale`
 - `systemctl enable --now tailscaled`
 - `tailscale up` -> bekommst link für dein Handy browser, da auf knopf und fertig
+- `tailscale set --ssh`
 
 ##### Anydesk
 
