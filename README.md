@@ -24,7 +24,7 @@ Windoof/Tiny11:
 Arch Installation vorbereiten
 ===========
 
-- Herunterladen: [Download Seite](https://archlinux.org/download/) | [Direkter Download](https://geo.mirror.pkgbuild.com/iso/2024.09.01/)
+- Herunterladen: [Arch Download Seite](https://archlinux.org/download/) | [Download Seite TU] (https://mirror.informatik.tu-freiberg.de/arch/iso/2024.10.01/) | [Direkter Download](https://mirror.informatik.tu-freiberg.de/arch/iso/2024.10.01/archlinux-2024.10.01-x86_64.iso)
 - Bootstick erstellen (Rufus,...)
 - Neu Starten
 - Secure Boot deaktivieren (F2 Bios Menue)
