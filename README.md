@@ -99,7 +99,7 @@ Copilot chat bez. arch server
 
 [Link](https://github.com/copilot/c/4ea1e118-10c5-4fa7-a2a2-631ebce95368)
 
-I want to setup a "server" on arch linux. I need a database, which is accessible inside the local network (I use tailscale to access it from elsewhere) and has a phpmyadmin console (which should also be accessible elsewhere). What do I need to install and how to configure it, give me a tutorial
+## I want to setup a "server" on arch linux. I need a database, which is accessible inside the local network (I use tailscale to access it from elsewhere) and has a phpmyadmin console (which should also be accessible elsewhere). What do I need to install and how to configure it, give me a tutorial
 
 To set up a server on Arch Linux with a database accessible within your local network and a phpMyAdmin console, follow these steps:
 
@@ -248,7 +248,7 @@ To set up a server on Arch Linux with a database accessible within your local ne
 
 You should now have a fully functional server with a database and phpMyAdmin accessible both locally and remotely via Tailscale.
 
-Can I controll my server using a gui with tailscale? A friend of mine needs his stuff there and has to access it just like with anydesk.
+## Can I controll my server using a gui with tailscale? A friend of mine needs his stuff there and has to access it just like with anydesk.
 
 You can control your server using a GUI over Tailscale by using a remote desktop solution. Here are a few options you can choose from:
 
@@ -301,7 +301,7 @@ You can control your server using a GUI over Tailscale by using a remote desktop
 
 This should allow your friend to access the server GUI over Tailscale similarly to AnyDesk.
 
-He needs to access this server through vnc from any devide (android phone, windows,...) is this possible?
+## He needs to access this server through vnc from any devide (android phone, windows,...) is this possible?
 
 Yes, it is possible to access the server through VNC from any device, including Android phones and Windows PCs. Here's how your friend can do it:
 
