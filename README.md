@@ -86,6 +86,9 @@ Nun: `archinstall`
 - `tailscale set --ssh`
 
 ##### Anydesk
+
+System update: `sudo pacman -Syu`
+
 ###### Yay installieren (Option 1)
 - `sudo pacman -Sy` -> USER passwort eingaben (wenn nix gehen probier halt admin lol)
 - `sudo pacman -S glibc lib32-glibc`
