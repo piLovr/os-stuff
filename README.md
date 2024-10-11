@@ -86,10 +86,15 @@ Nun: `archinstall`
 - `tailscale set --ssh`
 
 ##### Anydesk
-
+###### Yay installieren (Option 1)
 - `sudo pacman -Sy` -> USER passwort eingaben (wenn nix gehen probier halt admin lol)
 - `sudo pacman -S glibc lib32-glibc`
 - `sudo pacman -S yay`
+
+###### Yay installieren (Option 2)
+`pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si`
+
+###### Anydesk installieren mit yay
 - `yay -S anydesk-bin`
 
 - rest mach ich xD
